@@ -1,0 +1,21 @@
+mat-card {
+  /*width:200px;
+  margin:10px;*/
+  background-color:lightgreen;
+}
+
+mat-card-title {
+  color:black;
+  font-weight:bolder;
+}
+mat-card-content {
+  color:darkblue;
+}
+
+mat-card-footer {
+  color:darkgray;
+}
+
+.btn {
+  background-color: salmon;
+}

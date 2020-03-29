@@ -1,0 +1,28 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="/authentication/register" (click)="onClose()">
+    <mat-icon>whatshot</mat-icon>
+    <span class="nav-caption">Register</span>
+  </a>
+  <a mat-list-item [routerLink]="['/category','Books']" (click)="onClose()">
+    <mat-icon>chevron_right</mat-icon>
+    <span class="nav-caption">Books</span>
+  </a>
+  <a mat-list-item [routerLink]="['/category','Electronics']" (click)="onClose()">
+    <mat-icon>chevron_right</mat-icon>
+    <span class="nav-caption">Electronics</span>
+  </a>
+  <a mat-list-item routerLink="/" (click)="onClose()">
+    <mat-icon>help</mat-icon>
+    <span class="nav-caption">Help</span>
+  </a>
+  <a mat-list-item routerLink="/authentication/login" (click)="onClose()">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">Login</span>
+  </a>
+  <mat-list-item>
+    <button mat-icon-button (click)="onClose()">
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">Logout</span>
+    </button>
+  </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,23 @@
+<div fxLayout="column" >
+  <p fxFlexAlign="center">Product Details</p>
+  <div fxFlexAlign="center">
+    <mat-card>
+      <mat-card-title>{{prod.name}}</mat-card-title>
+      <mat-card-content>
+        <div><mat-icon>face</mat-icon></div>
+        {{prod.description}}
+        <p>Price: {{prod.price}}</p>
+        <p>SKU: {{prod.sku}}</p>
+      </mat-card-content>
+      <mat-card-footer></mat-card-footer>
+    </mat-card>
+  </div>
+  <div fxFlexAlign="center">
+    <button mat-button [routerLink]="['/product/add/',prod.id]">Add Comment</button>
+    <button mat-button routerLink="/product/addToCart">Add to Cart</button>
+  </div>
+  <div>
+    <app-comment-list></app-comment-list>
+  </div>
+
+</div>

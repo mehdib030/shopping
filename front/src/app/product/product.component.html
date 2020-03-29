@@ -1,0 +1,16 @@
+<p>Hello, Mehdi!</p>
+<div fxLayout="row wrap">
+  <div *ngFor="let prod of prods" >
+    <mat-card>
+      <mat-card-title><a mat-button [routerLink]="['/product/detail',prod.id]" routerLinkActive="mat-accent">{{prod.name}}</a></mat-card-title>
+      <mat-card-content>
+        <div><mat-icon>face</mat-icon></div>
+        <div height="20" width="20" ><img src="http://localhost:8080/images/Alexa.jpg" height="100" width="100" /></div>
+        {{prod.description}}
+        <p>Price: {{prod.price}}</p>
+      </mat-card-content>
+      <mat-card-footer></mat-card-footer>
+    </mat-card>
+    <br>
+  </div>
+</div>

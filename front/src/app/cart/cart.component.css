@@ -1,0 +1,41 @@
+mat-form-field {
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+mat-expansion-panel {
+  width:450px;
+  background-color: lightgreen;
+}
+
+mat-expansion-panel-header{
+  color:black;
+  font-weight:bolder;
+}
+
+p {
+  color:darkblue;
+}
+
+.spacer {
+  height:20px;
+}
+
+.btn {
+  background-color: salmon;
+}
+
+.spacer {
+  height:20px;
+}
+
+.v-spacer {
+  width:20px;
+}
+
+.checkout p {
+  color:white;
+}

@@ -1,0 +1,28 @@
+.productsPanel{
+  width:800px;
+  margin:10px;
+  color:white;
+  #background-color:red;
+}
+
+.productsPanel > mat-card-title {
+  color:white;
+}
+
+.products {
+  width:200px;
+  margin:10px;
+  background-color:lightgreen;
+}
+
+mat-card-title {
+  color:black;
+  font-weight:bolder;
+}
+mat-card-content{
+  color:darkblue;
+}
+
+mat-card-footer {
+  color:darkgray;
+}

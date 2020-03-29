@@ -1,0 +1,15 @@
+<mat-card>
+  <p>Add a Comment</p>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form [formGroup]="form" (submit)="saveComment()" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput type="text" formControlName="title" placeholder="Title" [ngModel]="comment?.title">
+      <mat-error *ngIf="form.get('title').invalid">Please enter a comment title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput rows="4" formControlName="content" placeholder="Content" [ngModel]="comment?.content"></textarea>
+      <mat-error *ngIf="form.get('content').invalid">Please enter a comment content.</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit" >Save Comment</button>
+  </form>
+</mat-card>

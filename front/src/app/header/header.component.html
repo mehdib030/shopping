@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <span>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a mat-button  (click)="getAllProducts()">Logo</a>
+    <a mat-button>Deals</a>
+  </span>
+  <span class="spacer"></span>
+  <span>
+     <mat-form-field class="example-form-field">
+        <input matInput type="search" [(ngModel)]="value" placeholder="Search">
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="search(value)">
+          <mat-icon>close</mat-icon>
+        </button>
+       <mat-icon>search</mat-icon>
+      </mat-form-field>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li>
+      <a mat-button routerLink="" routerLinkActive="mat-accent">Orders</a>
+    </li>
+    <li>
+      <a mat-button routerLink="/cart/cart" routerLinkActive="mat-accent">Your Cart</a>
+    </li>
+    <li>
+      <a mat-button routerLink="/authentication/login" routerLinkActive="mat-accent">Login</a>
+    </li>
+    <li>
+      <a mat-button routerLink="/authentication/register" routerLinkActive="mat-accent">Register</a>
+    </li>
+    <li>
+      <button mat-button>Logout</button>
+    </li>
+  </ul>
+
+</mat-toolbar>

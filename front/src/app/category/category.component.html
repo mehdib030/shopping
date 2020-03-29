@@ -1,0 +1,22 @@
+<p>Hello, Mehdi!</p>
+<div fxLayout="row">
+<mat-card class="productsPanel">
+  <mat-card-title>{{categoryName}}</mat-card-title>
+  <mat-card-content>
+    <div fxLayout="row wrap" >
+      <div *ngFor="let prod of prods" >
+        <mat-card class="products">
+          <mat-card-title><a mat-button [routerLink]="['/product/detail',prod.id]" routerLinkActive="mat-accent">{{prod.name}}</a></mat-card-title>
+          <mat-card-content>
+            <div><mat-icon>face</mat-icon></div>
+            {{prod.description}}
+            <p>Price: {{prod.price}}</p>
+          </mat-card-content>
+          <mat-card-footer></mat-card-footer>
+        </mat-card>
+        <br>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>

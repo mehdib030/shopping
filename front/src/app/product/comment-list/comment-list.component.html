@@ -1,0 +1,19 @@
+<div fxLayout="column" fxFlexAlign="center">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div fxLayout="column" fxFlexAlign="center" *ngIf="!isLoading">
+    <mat-accordion multi="false" >
+      <mat-expansion-panel *ngFor="let comment of comments" >
+        <mat-expansion-panel-header>
+          {{ comment.title }}
+        </mat-expansion-panel-header>
+        <p>{{comment.content}}</p>
+        <mat-action-row>
+          <a mat-button color="primary" [routerLink]="['/product/edit', comment.id]">EDIT</a>
+          <button mat-button color="warn" (click)="deleteComment(comment.id)">DELETE</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-paginator [length]="totalComments" [pageSize]="numberOfComments" [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEventListener($event)"></mat-paginator>
+  </div>
+</div>
